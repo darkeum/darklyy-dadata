@@ -1,0 +1,46 @@
+{
+    "name": "darkeum/darklyy-dadata",
+    "description": "Добавляет возможность работы с DaData в Darklyy.",
+    "keywords": [
+        "darkeum",
+        "darklyy",
+        "dadata",
+        "darklyy-dadata"
+    ],
+    "homepage": "https://github.com/darkeum/darklyy-dadata",
+    "license": "MIT",
+    "authors": [{
+        "name": "Komarov Ivan",
+        "email": "ki@darkeum.ru",
+        "homepage": "https://darkeum.ru",
+        "role": "Developer"
+    }],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Darkeum\\DaData\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.3|^8.0|^8.1",
+        "guzzlehttp/guzzle": "^7.0|^7.2",
+        "darkeum/darklyy-package-tools": "^1.0.0"
+    },
+    "prefer-stable": true,
+    "extra": {
+        "darklyy": {
+            "providers": [
+                "Darkeum\\DaData\\DaDataServiceProvider"
+            ],
+            "aliases": {
+                "DaDataAddress": "Darkeum\\DaData\\Facades\\DaDataAddress",
+                "DaDataName": "Darkeum\\DaData\\Facades\\DaDataName",
+                "DaDataEmail": "Darkeum\\DaData\\Facades\\DaDataEmail",
+                "DaDataPhone": "Darkeum\\DaData\\Facades\\DaDataPhone",
+                "DaDataCompany": "Darkeum\\DaData\\Facades\\DaDataCompany",
+                "DaDataBank": "Darkeum\\DaData\\Facades\\DaDataBank",
+                "DaDataPassport": "Darkeum\\DaData\\Facades\\DaDataPassport"
+            }
+        }
+    }
+}
